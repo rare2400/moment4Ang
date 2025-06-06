@@ -1,0 +1,63 @@
+label {
+    font-weight: 700;
+}
+
+input {
+    width: 98%;
+    padding: 0.6em;
+    font-size: 0.8em;
+    margin: 0.5em 0;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5) inset;
+}
+
+table {
+    width: 100%;
+    margin: 0.5em auto 0;
+    border-collapse: collapse;
+}
+
+th {
+    text-decoration: underline;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+}
+
+th:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+td {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+}
+
+.progression {
+    text-align: center;
+}
+
+@media (min-width: 50rem) {
+    .search {
+        text-align: center;
+    }
+
+    input {
+        width: 60%;
+        margin: 0 auto 1em;
+    }
+
+    table {
+        width: 90%;
+    }
+
+    td {
+        padding: 0.5rem 0 0.5em 1em;
+    }
+
+    .progression {
+        padding: 0;
+    }
+}
+
+
