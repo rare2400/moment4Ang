@@ -1,59 +1,65 @@
 # Moment4Ang
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.10.
+En webbapplikation som visar ramschemat för Webbutvecklingsprogrammet med kurskod, kursnamn och progression. Applikationen utvecklas med [Angular CLI](https://github.com/angular/angular-cli) version 19.2.10 och stödjer filtrering och sortering av kurserna i tabellen. När sökfältet fylls i, en bokstav räcker, 
+filtreras tabellen med kurser innehållande bokstaven/sökordet. Vid tryck på `Kurskod`, `Namn` eller `Progression` så sorteras den valda datan. Första trycket
+sorterar datan i fallande ordning och andra trycket sorterar stigande.
 
-## Development server
 
-To start a local development server, run:
+## Användning av projektet
+1. Klona repo
+```bash
+git clone https://github.com/rare2400/moment4Ang.git
+cd moment4Ang
+```
 
+3. Installera paket
+```bash
+npm install
+```
+
+4. Starta utvecklingsserver
 ```bash
 ng serve
 ```
+4. Öppna `http://localhost:4200/` i webbläsaren
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
+5. Bygg färdigt projekt
 ```bash
 ng build
 ```
+## Funktionalitet
+- Se ramschemat för Webbutvecklingsprogrammet
+- Filtrera och sortera data
+  - Filtrering i sökformulär
+  - Sortering fallande & stigande vid tryck på rubrik
+- Databindning mellan formulär och TypeScript
+- Responsiv design
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Verktyg
+- **Angular**: Skapa services, signals och component, samt HttpClient för att göra HTTP-anrop
+- **TypeScript**: Logiken bakom med filtrering och sortering
+- **HTML/CSS**: För att bygga och styla responsiv webbplats
+- **Git**: Versionshantering av koden
 
-## Running unit tests
+## Struktur
+| Mapp/fil                     | Beskrivning                                          |
+| ---------------------------- | -----------------------------------------------------|
+| `src/app/courses`            | Komponent som skriver ut tabell över kurser med filtrerings- och sorteringsfunktion. |
+| `src/app/partials/footer`    | Footer-komponent med sidfot                          |
+| `src/app/partials/header`    | Header-komponent med rubrik                          |
+| `src/app/models/course`      | Interface för kursdata                               |
+| `src/app/services/courses`   | Service som hämtar kursdata från API                 |
+| `src/app.component.html`     | Hämtar in komponenter till index.html                |
+| `src/styles.css`             | Gemensam styling för hela webbplatsen/applikationen  |
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## Reflektioner
+Uppgiften fokuserar att använda HTTP-anrop i Angular med HttpClient. Det har varit intressant och givande att lära sig ett nytt sätt att hämta data från API:er,
+samt att använda sig av services. Att dela upp koden i komponenter var också givande i form av att återanvända kod - främst css. En utmaning är att komma ihåg
+att importera komponenter och moduler, fördelen är att Angular hjälper en ofta med vad som saknas. 
 
-```bash
-ng test
-```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Skapad av
+Uppgift i kursen programmering i TypeScript     
+Webbutveklingsprogrammet, Mittuniversitetet     
+Ramona Reinholdz     
+[rare2400@student.miun.se](rare2400@student.miun.se)
